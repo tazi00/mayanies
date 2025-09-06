@@ -22,7 +22,7 @@ const navigation = [
 
 export default function Header() {
   return (
-    <header className="bg-background shadow-sm">
+    <header className="">
       <div className="container mx-auto px-4 lg:px-0">
         <div className="flex items-center justify-between py-2 lg:py-4">
           <Logo />
@@ -30,13 +30,12 @@ export default function Header() {
             className="flex gap-3 items-center justify-between"
             aria-label="Global"
           >
-            <ThemeToggler />
-            <div className="lg:hidden">
+            <div className="lg:hidden flex gap-3">
+              <ThemeToggler />
+
               <Sheet>
                 <SheetTrigger asChild>
-                  <Button variant="outline" aria-label="Open Menu">
-                    <Menu />
-                  </Button>
+                  <Menu />
                 </SheetTrigger>
                 <SheetContent side="left" className="w-64 p-6">
                   <SheetHeader>
@@ -83,6 +82,7 @@ export default function Header() {
                   {item.name}
                 </a>
               ))}
+              <ThemeToggler />
 
               <a
                 href="#"

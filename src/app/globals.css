@@ -5,6 +5,8 @@
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-2: var(--background-2);
+  --color-foreground-2: var(--foreground-2);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -45,6 +47,8 @@
 
 :root {
   --radius: 0.625rem;
+  --background-2: oklch(100% 0.00011 271.152);
+  --foreground-2: oklch(22.213% 0.00003 271.152);
 
   /* Background & text */
   --background: oklch(0.97 0.01 270); /* Light off-white */
@@ -57,7 +61,7 @@
   --popover-foreground: oklch(0.15 0.02 260);
 
   /* Primary / Secondary */
-  --primary: oklch(0.35 0.15 250); /* Deep Indigo */
+  --primary: oklch(74.419% 0.18112 56.449); /* Deep Indigo */
   --primary-foreground: oklch(0.97 0.01 270);
   --secondary: oklch(0.55 0.07 180); /* Soft Teal */
   --secondary-foreground: oklch(0.15 0.02 260);
@@ -88,6 +92,8 @@
 }
 
 .dark {
+  --background-2: oklch(0.12 0.02 260);
+  --foreground-2: oklch(100% 0.00011 271.152);
   --background: oklch(0.12 0.02 260); /* Dark gray */
   --foreground: oklch(0.95 0.01 270); /* White-ish text */
   --card: oklch(0.15 0.05 250);
@@ -95,7 +101,7 @@
   --popover: oklch(0.15 0.05 250);
   --popover-foreground: oklch(0.95 0.01 270);
 
-  --primary: oklch(0.6 0.2 250); /* Indigo highlight */
+  --primary: oklch(74.419% 0.18112 56.449); /* Indigo highlight */
   --primary-foreground: oklch(0.95 0.01 270);
   --secondary: oklch(0.3 0.05 180); /* Soft teal */
   --secondary-foreground: oklch(0.95 0.01 270);
@@ -126,6 +132,6 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background-2 text-foreground;
   }
 }
