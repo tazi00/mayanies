@@ -1,10 +1,9 @@
-// import Image from "next/image";
+import React from "react";
 
-export default function Home() {
+function HeroSec() {
   return (
     <section className="relative bg-background text-foreground">
       <div className="mx-auto max-w-7xl px-6 py-24 lg:flex lg:items-center lg:gap-x-12 lg:px-8">
-        {/* Left Content */}
         <div className="mx-auto max-w-2xl text-center lg:mx-0 lg:flex-auto lg:text-left">
           <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
             Welcome to{" "}
@@ -31,7 +30,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Right Illustration */}
         <div className="relative mt-16 flex justify-center lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
           <div className="relative w-full max-w-md">
             <div className="absolute -inset-4 rounded-2xl bg-gradient-to-tr from-primary/30 to-secondary/30 blur-3xl"></div>
@@ -46,3 +44,5 @@ export default function Home() {
     </section>
   );
 }
+
+export default HeroSec;

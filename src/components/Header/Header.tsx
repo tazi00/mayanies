@@ -12,6 +12,7 @@ import {
 import { Button } from "../ui/button";
 import ThemeToggler from "../ThemeToggler";
 import Logo from "../Logo";
+import Link from "next/link";
 
 const navigation = [
   { name: "Product", href: "#" },
@@ -54,12 +55,12 @@ export default function Header() {
                         {item.name}
                       </a>
                     ))}
-                    <a
-                      href="#"
+                    <Link
+                      href="/login"
                       className="block rounded-lg px-3 py-2 text-base font-medium text-foreground hover:bg-primary/10"
                     >
                       Log in
-                    </a>
+                    </Link>
                   </div>
 
                   <SheetClose asChild>
@@ -84,12 +85,12 @@ export default function Header() {
               ))}
               <ThemeToggler />
 
-              <a
-                href="#"
+              <Link
+                href="/login"
                 className="text-sm font-medium text-foreground hover:text-primary transition-colors"
               >
                 Log in <span aria-hidden="true">&rarr;</span>
-              </a>
+              </Link>
             </div>
           </nav>
         </div>
